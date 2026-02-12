@@ -10,7 +10,6 @@ La persistencia de datos se realiza mediante archivos JSON (`products.json` y `c
 
 - Node.js
 - Express
-- UUID
 - File System (fs)
 - Postman
 
@@ -146,9 +145,9 @@ Agrega un producto al carrito.
 
 La información se almacena en:
 
-products.json
+`products.json`
 
-carts.json
+`carts.json`
 
 Los datos permanecen guardados incluso al reiniciar el servidor.
 
