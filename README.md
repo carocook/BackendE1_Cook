@@ -42,7 +42,7 @@ BackendE1_Cook
 1. Clonar el repositorio:
 
 ```bash
-git clone <url-del-repo>
+git clone https://github.com/carocook/BackendE1_Cook.git
 ```
 
 2. Instalar dependencias:
