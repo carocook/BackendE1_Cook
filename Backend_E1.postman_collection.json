@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "c289196a-bb3a-4a45-84af-054d0e1965a9",
+		"name": "Backend_E1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44932593",
+		"_collection_link": "https://carolinacook.postman.co/workspace/Carolina-Cook's-Workspace~977cb3a9-7c3f-4c8e-890c-4c0d52422893/collection/44932593-c289196a-bb3a-4a45-84af-054d0e1965a9?action=share&source=collection_link&creator=44932593"
+	},
+	"item": [
+		{
+			"name": "Crear producto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar producto por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear carrito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar producto al carrito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts/1/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"1",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar otro producto al carrito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts/1/product/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"1",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incrementar producto en carrito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 1800000,\n  \"stock\": 5,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts/1/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"1",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar producto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 2000000,\n  \"stock\": 3,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Notebook ASUS ROG\",\n  \"description\": \"Ryzen 7, 32GB RAM, RTX 4060\",\n  \"code\": \"ASUSROG01\",\n  \"price\": 2000000,\n  \"stock\": 3,\n  \"category\": \"tecnologia\",\n  \"thumbnails\": [\"rog1.jpg\"]\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

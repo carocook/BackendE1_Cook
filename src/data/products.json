@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 2,
+    "title": "Mouse Logitech G502",
+    "description": "Sensor HERO 25K",
+    "code": "LOGG502",
+    "price": 85000,
+    "status": true,
+    "stock": 20,
+    "category": "tecnologia",
+    "thumbnails": []
+  },
+  {
+    "id": 3,
+    "title": "Teclado Redragon Kumara",
+    "description": "Switch Blue, RGB",
+    "code": "REDKUM01",
+    "price": 120000,
+    "status": true,
+    "stock": 15,
+    "category": "tecnologia",
+    "thumbnails": []
+  }
+]
