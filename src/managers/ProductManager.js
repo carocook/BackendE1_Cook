@@ -24,7 +24,36 @@ export default class ProductManager {
   async addProduct(product) {
     const products = await this.getProducts();
 
-    if (products.some((p) => p.code === product.code)) {
+    const { title, description, code, price, stock, category, thumbnails } =
+      product;
+
+    // validaciones
+    if (
+      !title ||
+      !description ||
+      !code ||
+      price === undefined ||
+      stock === undefined ||
+      !category
+    ) {
+      throw new Error("Faltan campos obligatorios");
+    }
+
+    // validacion de tipos
+    if (typeof price !== "number" || price <= 0) {
+      throw new Error("El price debe ser un número mayor a 0");
+    }
+
+    if (typeof stock !== "number" || stock < 0) {
+      throw new Error("El stock debe ser un número mayor o igual a 0");
+    }
+
+    if (thumbnails && !Array.isArray(thumbnails)) {
+      throw new Error("thumbnails debe ser un arreglo");
+    }
+
+    // validacion de codigo unico
+    if (products.some((p) => p.code === code)) {
       throw new Error("El código ya existe");
     }
 
@@ -33,19 +62,20 @@ export default class ProductManager {
 
     const newProduct = {
       id: newId,
-      title: product.title,
-      description: product.description,
-      price: product.price,
-      code: product.code,
-      stock: product.stock,
+      title,
+      description,
+      code,
+      price,
       status: product.status ?? true,
-      category: product.category,
-      thumbnails: product.thumbnails ?? [],
+      stock,
+      category,
+      thumbnails: thumbnails ?? [],
     };
 
     products.push(newProduct);
 
     await fs.writeFile(this.path, JSON.stringify(products, null, 2));
+
     return newProduct;
   }
 
